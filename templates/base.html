@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{page_title}}</title>
+<link rel="stylesheet" href="{{raiz}}estilo.css">
+</head>
+<body>
+<div id="navbar">
+  <span class="caixa"></span>
+  <a href="{{raiz}}index.html">Mais</a>
+  <span class="dir"><a href="{{raiz}}index.html">Próximo blog&raquo;</a></span>
+</div>
+<div id="outer">
+  <div id="header">
+    <h1><a href="{{raiz}}index.html">{{blog_title}}</a></h1>
+    <p class="descricao">{{blog_desc}}</p>
+  </div>
+  <div id="colunas">
+    <div id="main">
+{{content}}
+    </div>
+    <div id="sidebar">
+{{sidebar}}
+    </div>
+  </div>
+  <div id="footer">
+    Tema Simples. Fotos do autor. &nbsp;<a class="aviso" href="{{raiz}}aviso.html">aviso</a>
+  </div>
+</div>
+<script src="{{raiz}}site.js"></script>
+</body>
+</html>

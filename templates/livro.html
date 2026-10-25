@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{titulo}}</title>
+<style>
+  html { background: #2b2a27; }
+  body { margin: 0; padding: 24px 12px 60px; font-family: "Courier New", Courier, monospace; color: #2a2f45; }
+  .capa { max-width: 760px; margin: 0 auto 18px; color: #9a9688; font-size: 12px; }
+  .folha {
+    max-width: 760px; margin: 0 auto 28px; padding: 26px 30px 34px;
+    background: #e9e2cc repeating-linear-gradient(#e9e2cc 0 25px, #c9c3b0 25px 26px);
+    box-shadow: 0 2px 10px rgba(0,0,0,.6); transform: rotate(-.35deg);
+  }
+  .folha:nth-child(even) { transform: rotate(.25deg); }
+  h1 { font-size: 15px; letter-spacing: 2px; margin: 0 0 4px; color: #3a3a3a; }
+  h2 { font-size: 12px; font-weight: normal; color: #7a7466; text-align: right; margin: 0 0 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th { text-align: left; border-bottom: 2px solid #8a8473; font-size: 11px; color: #4a4a4a; padding: 2px 4px; }
+  td { padding: 3px 4px; vertical-align: top; border-bottom: 1px solid rgba(120,110,90,.25); }
+  td:last-child { font-style: italic; }
+  p { font-size: 13px; line-height: 26px; margin: 0 0 6px; font-style: italic; }
+  .borrao { color: transparent; text-shadow: 0 0 6px rgba(40,45,70,.7); user-select: none; }
+  s { color: #555; }
+  .lapis { color: #a39f93; font-family: Georgia, serif; letter-spacing: 1px; font-size: 12px; }
+  hr { border: 0; border-top: 1px dashed #8a8473; margin: 18px 0; }
+  @media (max-width: 600px) { .folha { padding: 16px 12px; } table { font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="capa">EST. PICO VELADO. REG. HORÁRIO. {{titulo}}. {{periodo}}</div>
+{{corpo}}
+</body>
+</html>

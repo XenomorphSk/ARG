@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>.</title>
+<style>
+  body { background: #fff; color: #222; font-family: "Courier New", Courier, monospace; margin: 0; padding: 40vh 16px 0; text-align: center; }
+  p { margin: 0 0 12px; font-size: 15px; }
+</style>
+</head>
+<body>
+<p>Obrigado por registrar.</p>
+<p id="hora"></p>
+<script>
+(function () {
+  function p(n) { return (n < 10 ? "0" : "") + n; }
+  var d = new Date();
+  document.getElementById("hora").textContent = p(d.getHours()) + ":" + p(d.getMinutes());
+})();
+</script>
+</body>
+</html>

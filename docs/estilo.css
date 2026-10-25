@@ -1,0 +1,108 @@
+/* Tema "Simples", ajustado à mão em 2025. */
+body {
+  margin: 0;
+  background: #d8dcdf;
+  font: 13px Arial, Tahoma, Helvetica, sans-serif;
+  color: #222;
+}
+a { color: #2288bb; text-decoration: none; }
+a:visited { color: #888; }
+a:hover { text-decoration: underline; color: #33aaff; }
+
+#navbar {
+  height: 30px; line-height: 30px; background: #ececec; border-bottom: 1px solid #c7c7c7;
+  font-size: 12px; padding: 0 10px; color: #555;
+}
+#navbar .caixa {
+  display: inline-block; width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;
+  background: #f58a33; border-radius: 3px;
+}
+#navbar .dir { float: right; }
+
+#outer {
+  width: 880px; margin: 20px auto 30px; background: #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,.15); border: 1px solid #c5c9cc;
+}
+#header { background: #6b8592; padding: 26px 30px 22px; color: #fff; }
+#header h1 { margin: 0; font: normal 40px Georgia, "Times New Roman", serif; }
+#header h1 a { color: #fff; }
+#header .descricao { margin: 8px 0 0; font-size: 13px; color: #dde6ea; }
+
+#colunas { display: flex; align-items: flex-start; padding: 20px 15px 30px 30px; }
+#main { flex: 1; min-width: 0; padding-right: 30px; }
+#sidebar { width: 250px; flex-shrink: 0; border-left: 1px solid #eee; padding-left: 15px; }
+
+h2.date-header {
+  font: bold 11px Arial, sans-serif; color: #999; text-transform: uppercase;
+  margin: 30px 0 8px; border-bottom: 1px solid #eee; padding-bottom: 3px;
+}
+h2.date-header:first-child { margin-top: 0; }
+.post { margin: 0 0 25px; }
+h3.post-title { font: normal 22px Georgia, "Times New Roman", serif; margin: 0 0 10px; }
+.post-body { font-size: 14px; line-height: 1.45; }
+.post-body p { margin: 0 0 1em; }
+.post-body blockquote { margin: 0 0 1em 10px; padding: 4px 12px; border-left: 3px solid #ddd; color: #555; font-style: italic; }
+.post-body table { border-collapse: collapse; margin: 0 0 1em; font-size: 13px; }
+.post-body th, .post-body td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+.post-body th { background: #f3f3f3; }
+.post-body pre { font: 12px "Courier New", Courier, monospace; background: #f6f6f6; border: 1px solid #ddd; padding: 10px; overflow-x: auto; }
+.post-footer {
+  margin-top: 15px; padding: 6px 10px; background: #f9f9f9; border-bottom: 1px solid #eee;
+  font-size: 11px; color: #666;
+}
+.post-footer .comentarios { margin-left: 12px; color: #999; font-style: italic; }
+
+.foto { position: relative; display: block; margin: 0 auto 1em; text-align: center; }
+.foto img {
+  max-width: 100%; height: auto; padding: 5px; background: #fff; border: 1px solid #eee;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1); color: #999; font-size: 11px;
+}
+/* Entre 3h e 4h no horário de quem lê. */
+.foto::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+  background: #e4e7e9; opacity: 0; pointer-events: none; transition: opacity 40s;
+}
+.nevoa .foto::after { opacity: .13; }
+
+#blog-pager { overflow: hidden; text-align: center; margin: 20px 0; font-size: 12px; }
+#blog-pager .newer { float: left; }
+#blog-pager .older { float: right; }
+.comments h4 { font: normal 16px Georgia, serif; margin: 20px 0 6px; }
+.comments p { color: #999; font-size: 12px; }
+.vazio { color: #999; }
+
+.widget { margin: 0 0 26px; font-size: 12px; }
+.widget h2 { font: bold 11px Arial, sans-serif; text-transform: uppercase; color: #000; margin: 0 0 8px; }
+.perfil .avatar { float: left; width: 64px; height: 64px; margin: 0 8px 4px 0; background: #ccd3d7; border: 1px solid #bbb; }
+.perfil p { margin: 0 0 6px; }
+.perfil:after { content: ""; display: block; clear: both; }
+.contador span {
+  display: inline-block; width: 13px; padding: 2px 0; margin-right: 1px; text-align: center;
+  font: bold 13px "Courier New", monospace; background: #111; color: #9f9;
+}
+.ultimo { margin: 6px 0 0; color: #aaa; font-size: 11px; }
+.arquivo, .arquivo ul, .links { list-style: none; margin: 0; padding: 0; }
+.arquivo ul { padding-left: 14px; }
+.arquivo summary { cursor: pointer; color: #2288bb; }
+.arquivo summary span { color: #666; }
+.arquivo .posts li { margin: 3px 0; }
+.links li { margin: 4px 0; }
+
+table.registros { border-collapse: collapse; width: 100%; font: 12px "Courier New", monospace; }
+table.registros th, table.registros td { border: 1px solid #ddd; padding: 3px 5px; white-space: nowrap; }
+table.registros td.obs { white-space: normal; }
+ul.dias { columns: 4; font-size: 12px; }
+
+#footer { clear: both; text-align: center; font-size: 10px; color: #aaa; padding: 12px; border-top: 1px solid #eee; }
+#footer .aviso { color: #bbb; }
+
+@media (max-width: 920px) {
+  #outer { width: auto; margin: 0; border: 0; }
+  #colunas { display: block; padding: 16px; }
+  #main { padding-right: 0; }
+  #sidebar { width: auto; border-left: 0; border-top: 1px solid #eee; padding: 16px 0 0; margin-top: 20px; }
+  #header { padding: 18px 16px; }
+  #header h1 { font-size: 30px; }
+  .post-body table, table.registros { display: block; overflow-x: auto; }
+  ul.dias { columns: 2; }
+}

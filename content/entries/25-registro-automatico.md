@@ -1,0 +1,26 @@
+---
+title: "REGISTRO AUTOMATICO 02/07/2025 03:00"
+publish_date: 2026-12-16
+entry_date: 2025-07-02
+entry_time: "03:00"
+act: 4
+author: "pv-auto"
+hidden_comment: "0000. aguardando próximo registro."
+---
+```
+ESTACAO PICO VELADO (PV)          REDE RAOS
+REGISTRO HORARIO AUTOMATICO       PUBLICACAO AUTOMATICA
+
+DATA        HORA   TEMP   UR    VENTO    VIS    OBS
+01/07/2025  21:00   5.2   100   000/00   0050
+01/07/2025  22:00   5.0   100   000/00   3000
+01/07/2025  23:00   4.8   100   000/00   1000
+02/07/2025  00:00   4.7   100   000/00   0500
+02/07/2025  01:00   4.5   100   000/00   0200
+02/07/2025  02:00   4.3   100   000/00   0050   B1.
+02/07/2025  03:00   4.2   100   000/00   0000
+
+SENSOR VIS ............ SEM COMUNICACAO DESDE 01/07/2025 21:32
+OBSERVACAO MANUAL ..... NAO INFORMADA
+STATUS ................ REGISTRO ENCERRADO
+```

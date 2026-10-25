@@ -1,0 +1,42 @@
+name: publicar
+
+# Roda todo dia às 04:00 de Brasília (07:00 UTC), logo depois do registro das 03:00.
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: pip install markdown
+
+      - name: Build do dia
+        run: python build.py
+
+      - name: Commit de docs/
+        run: |
+          git config user.name "estacao-pv"
+          git config user.email "estacao-pv@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "nada novo hoje"
+          else
+            git commit -m "registro automático $(date -u +%Y-%m-%d)"
+            git push
+          fi
